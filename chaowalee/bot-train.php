@@ -37,7 +37,7 @@ if (!is_null($events['events'])) //check ค่าในตัวแปร $even
             $first_char = substr($txtin,0,1);//ตัดเอาเฉพาะตัวอักษรตัวแรก
 			if($txtin == "liff")
 			{
-				$txtsend = "line://app/1565368462-832ar4g6";
+				$txtsend = "line://app/1565368462-KLLJ0nRV";
 				reply_msg($txtsend,$replyToken);//เรียกใช้ function
 				break;
 			}
