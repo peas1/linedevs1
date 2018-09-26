@@ -7,6 +7,6 @@
     </head>
     <body>
         <h1>ทดสอบการแสดงผล</h1>
-        <input type="text" name="lastname">
+        <input type="text" class="form-control" id="usr">
     </body>
 </html>
