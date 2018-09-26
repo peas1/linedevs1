@@ -7,7 +7,7 @@
     </head>
     <body>
         <h1>ทดสอบการแสดงผล</h1>
-        <div class="container">
+        <div class="container-fluid">
             <div class="row">
                 <div class="col-lg-3">
                     <h4>นำเข้าข้อมูลอะไรสักอย่าง....</h4>
