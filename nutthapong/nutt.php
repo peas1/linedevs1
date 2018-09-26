@@ -7,6 +7,16 @@
     </head>
     <body>
         <h1>ทดสอบการแสดงผล</h1>
-        <input type="text" class="form-control" id="usr">
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6" style="background-color:yellow;"></div>
+                <div class="col-lg-6" style="background-color:pink;"></div>
+            </div>
+            <div class="row">
+                <div class="col-lg-4" style="background-color:red;"></div>
+                <div class="col-lg-4" style="background-color:green;"></div>
+                <div class="col-lg-4" style="background-color:blue;"></div>
+            </div>
+        </div>
     </body>
 </html>
