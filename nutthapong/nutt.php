@@ -12,7 +12,7 @@
                 <div class="col-lg-3">
                     <h4>นำเข้าข้อมูลอะไรสักอย่าง....</h4>
                     <label for="usr">ชื่อ:</label>
-                    <input type="text" class="form-control" id="text1" name="text1">
+                    <input type="text" class="form-control" id="text1" name="text1" placeholder="ลองดูซิเออ">
                     <label for="usr">ชื่อ:</label>
                     <input type="text" class="form-control" id="text1" name="text1">
                     <label for="usr">ชื่อ:</label>
