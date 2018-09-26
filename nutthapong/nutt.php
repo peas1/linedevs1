@@ -9,13 +9,13 @@
         <h1>ทดสอบการแสดงผล</h1>
         <div class="container">
             <div class="row">
-                <div class="col-lg-6" style="background-color:yellow;"></div>
-                <div class="col-lg-6" style="background-color:pink;"></div>
+                <div class="col-lg-6" style="background-color:yellow;">คอลัมน์ 1</div>
+                <div class="col-lg-6" style="background-color:pink;">คอลัมน์ 2</div>
             </div>
             <div class="row">
-                <div class="col-lg-4" style="background-color:red;"></div>
-                <div class="col-lg-4" style="background-color:green;"></div>
-                <div class="col-lg-4" style="background-color:blue;"></div>
+                <div class="col-lg-4" style="background-color:red;">คอลัมน์ 1</div>
+                <div class="col-lg-4" style="background-color:green;">คอลัมน์ 2</div>
+                <div class="col-lg-4" style="background-color:blue;">คอลัมน์ 3</div>
             </div>
         </div>
     </body>
