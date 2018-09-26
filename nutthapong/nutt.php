@@ -9,14 +9,14 @@
         <h1>ทดสอบการแสดงผล</h1>
         
             <div class="row">
-                <div class="col-lg-6" style="background-color:yellow;">คอลัมน์ 1</div>
+                <div class="col-lg-6" style="background-color:yellow;">
+                    <h4>นำเข้าข้อมูลอะไรสักอย่าง....</h4>
+                    <label for="usr">ชื่อ:</label>
+                    <input type="text" class="form-control" id="text1" name="text1">
+                </div>
                 <div class="col-lg-6" style="background-color:pink;">คอลัมน์ 2</div>
             </div>
-            <div class="row">
-                <div class="col-lg-4" style="background-color:red;">คอลัมน์ 1</div>
-                <div class="col-lg-4" style="background-color:green;">คอลัมน์ 2</div>
-                <div class="col-lg-4" style="background-color:blue;">คอลัมน์ 3</div>
-            </div>
+            
         
     </body>
 </html>
