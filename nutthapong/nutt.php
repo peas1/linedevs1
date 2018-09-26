@@ -4,5 +4,6 @@
     </head>
     <body>
         <h1>ทดสอบการแสดงผล</h1>
+        <input type="text" name="lastname">
     </body>
 </html>
