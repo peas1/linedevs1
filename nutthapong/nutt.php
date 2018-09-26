@@ -9,12 +9,18 @@
         <h1>ทดสอบการแสดงผล</h1>
         
             <div class="row">
-                <div class="col-lg-6" style="background-color:yellow;">
+                <div class="col-lg-3">
                     <h4>นำเข้าข้อมูลอะไรสักอย่าง....</h4>
                     <label for="usr">ชื่อ:</label>
                     <input type="text" class="form-control" id="text1" name="text1">
+                    <label for="usr">ชื่อ:</label>
+                    <input type="text" class="form-control" id="text1" name="text1">
+                    <label for="usr">ชื่อ:</label>
+                    <input type="text" class="form-control" id="text1" name="text1">
+                    <label for="usr">ชื่อ:</label>
+                    <input type="text" class="form-control" id="text1" name="text1">
                 </div>
-                <div class="col-lg-6" style="background-color:pink;">คอลัมน์ 2</div>
+                <div class="col-lg-9" style="background-color:pink;">คอลัมน์ 2</div>
             </div>
             
         
