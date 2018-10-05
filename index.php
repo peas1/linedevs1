@@ -21,7 +21,7 @@
         <div class="mt-5 container-fluid">
             <div class="row">
                 <div class="col-lg-4 offset-lg-4">
-                    <input type="button" class="btn btn-success" onclick="window.location.href='https://eass1-bot.herokuapp.com/nutthapong/'">
+                    <input type="button" class="btn btn-success btn-block" onclick="window.location.href='https://eass1-bot.herokuapp.com/nutthapong/'" value="Nutthapong.J">
                 </div>
             </div>
         </div> 
