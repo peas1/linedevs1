@@ -58,7 +58,7 @@ function reply_flexmsg($text,$replyToken)//สร้างข้อความ�
 									"flex": 0
 									}
 			}';
-	$messages = json_decode($flex);
+	$messages = $flex;
 	$url = 'https://api.line.me/v2/bot/message/reply';
     $data = [
                 'replyToken' => $replyToken,
