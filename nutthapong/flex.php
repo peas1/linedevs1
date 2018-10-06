@@ -24,14 +24,14 @@ function reply_msg($text,$replyToken)//สร้างข้อความแ�
 function reply_flexmsg($text,$replyToken)//สร้างข้อความและตอบกลับ
 {
     $access_token = '7Bkj6AqoRCKOJc08sAW2luAwLn3PT99764/VTeSHnDzCGlc0oXF+ourT4ZVRK01darE/LYd5ihfcuxEbHa30I4qAvzfJNK3EStUU/TKJcfw9xOJxTNo+AMJtXwpQD0zdZsLo/TDUGFUZAqSbN5fWUwdB04t89/1O/w1cDnyilFU=';
-    $messages = ['type' => 'bubble','body' => [
+    $messages = ['type' => 'bubble','body' => array(
 	                                           'type'=>'box',
 											   'layout'=>'horizontal',
-											   'contents'=>[
-											                'text'=>'Hello',
-															'text'=>'world!!'
-															]
-											]
+											   'contents'=>array(
+											                array('type'=>'text','text'=>'Hello!!'),
+															array('type'=>'text','text'=>'world!!')
+															)
+											)
 				];//สร้างตัวแปร 
     
 	
