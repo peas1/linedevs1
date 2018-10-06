@@ -79,6 +79,12 @@ if (!is_null($events['events'])) //check ค่าในตัวแปร $even
 				reply_msg($txtsend,$replyToken);//เรียกใช้ function
 				break;
 			}
+			if($txtin == "flex")
+			{
+				$txtsend = "hihumen";
+				reply_flexmsg($txtsend,$replyToken);//เรียกใช้ function
+				break;
+			}
 			if($first_char == "@")
 			{
 				$office_id = substr($txtin,1,3);///ได้รหัสการไฟฟ้า 
