@@ -13,7 +13,19 @@ function flex_msg()
 															"type": "text",
 															"text": "รายงานสถานะงานก่อสร้าง",
 															"weight": "bold",
+															"align":"center",
+															"size": "md"
+														},
+														{
+															"type": "text",
+															"text": "เดือน ตุลาคม 2561",
+															"weight": "bold",
+															"align":"center",
 															"size": "sm"
+														},
+														{
+															"type": "separator",
+															"margin": "xxl"
 														}]
 										},
 								"footer": {
