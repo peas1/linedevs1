@@ -3,9 +3,10 @@ require('render_msg.php');
 
 
 	$access_token = '7Bkj6AqoRCKOJc08sAW2luAwLn3PT99764/VTeSHnDzCGlc0oXF+ourT4ZVRK01darE/LYd5ihfcuxEbHa30I4qAvzfJNK3EStUU/TKJcfw9xOJxTNo+AMJtXwpQD0zdZsLo/TDUGFUZAqSbN5fWUwdB04t89/1O/w1cDnyilFU=';
-    $messages = [ 'type' => 'text', 
+    /*$messages = [ 'type' => 'text', 
                 'text' => "ทดสอบ PUSH"
-                ];
+                ];*/
+	$messages = flex_msg();			
     $url = 'https://api.line.me/v2/bot/message/push';
     $data = ['to' => "Ueb7a733f42e839e7b98adcf81bcff05b",'messages' => [$messages]];
     $post = json_encode($data);
