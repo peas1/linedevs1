@@ -38,7 +38,7 @@ function flex_msg()
 	$json1 = '{
 				"type":"flex",
 				"altText":"ทดสอบ Flex Message",
-				"contents":[{
+				"contents":{
 								"type": "bubble",
 								"body": {
 											"type": "box",
@@ -72,7 +72,7 @@ function flex_msg()
 									"flex": 0
 									}
 					
-				}]
+				}
 		
 	}';
 	$result = json_decode($json1);
