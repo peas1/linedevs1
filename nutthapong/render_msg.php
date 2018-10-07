@@ -86,7 +86,7 @@ function flex_msg()
 													"action": {
 																"type": "uri",
 																"label": "รายละเอียดเพิ่มเติม",
-																"uri": "https://linecorp.com"
+																"uri": "line://app/1565368462-83Eew3W6"
 															}
 												},
 												{
