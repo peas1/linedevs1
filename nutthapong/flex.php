@@ -4,7 +4,7 @@ require('render_msg.php');
 function reply_msg($text,$replyToken)//สร้างข้อความและตอบกลับ
 {
     $access_token = '7Bkj6AqoRCKOJc08sAW2luAwLn3PT99764/VTeSHnDzCGlc0oXF+ourT4ZVRK01darE/LYd5ihfcuxEbHa30I4qAvzfJNK3EStUU/TKJcfw9xOJxTNo+AMJtXwpQD0zdZsLo/TDUGFUZAqSbN5fWUwdB04t89/1O/w1cDnyilFU=';
-    $messages = flex_msg();
+    $messages = ['type' => 'text','text' => $text];//สร้างตัวแปร 
     $url = 'https://api.line.me/v2/bot/message/reply';
     $data = [
                 'replyToken' => $replyToken,
@@ -25,7 +25,7 @@ function reply_msg($text,$replyToken)//สร้างข้อความแ�
 function reply_flex_msg($text,$replyToken)//สร้างข้อความและตอบกลับ
 {
     $access_token = '7Bkj6AqoRCKOJc08sAW2luAwLn3PT99764/VTeSHnDzCGlc0oXF+ourT4ZVRK01darE/LYd5ihfcuxEbHa30I4qAvzfJNK3EStUU/TKJcfw9xOJxTNo+AMJtXwpQD0zdZsLo/TDUGFUZAqSbN5fWUwdB04t89/1O/w1cDnyilFU=';
-    $messages = ['type' => 'text','text' => $text];//สร้างตัวแปร 
+    $messages = flex_msg();	
     $url = 'https://api.line.me/v2/bot/message/reply';
     $data = [
                 'replyToken' => $replyToken,
