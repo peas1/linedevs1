@@ -35,7 +35,7 @@ function flex_msg()
 															"contents":[{
 																			"type":"box",
 																			"layout":"horizontal",
-																			"contents";[
+																			"contents":[
 																						{
 																								"type":"text",
 																								"text": "1.กฟอ.พธร.",
@@ -55,7 +55,7 @@ function flex_msg()
 																		{
 																			"type":"box",
 																			"layout":"horizontal",
-																			"contents";[
+																			"contents":[
 																						{
 																								"type":"text",
 																								"text": "2.กฟอ.......",
