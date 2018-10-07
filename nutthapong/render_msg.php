@@ -36,7 +36,7 @@ function flex_msg()
 									}
 			}';	
 	$result = json_decode($json);
-	return $result;
+	return $json;
 }
 
 
