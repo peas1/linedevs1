@@ -7,7 +7,7 @@ require('render_msg.php');
                 'text' => "ทดสอบ PUSH"
                 ];
     $url = 'https://api.line.me/v2/bot/message/push';
-    $data = ['to' => $obj_group['group_id'],'messages' => [$messages]];
+    $data = ['to' => "Ueb7a733f42e839e7b98adcf81bcff05b",'messages' => [$messages]];
     $post = json_encode($data);
     $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
     $ch = curl_init($url);
