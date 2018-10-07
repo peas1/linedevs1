@@ -35,7 +35,8 @@ function flex_msg()
 									"flex": 0
 									}
 			}';	
-	$result = json_decode($json);		
+	$result = json_decode($json);
+	return $result;
 }
 
 
