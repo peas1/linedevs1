@@ -26,6 +26,53 @@ function flex_msg()
 														{
 															"type": "separator",
 															"margin": "xxl"
+														},
+														{
+															"type":"box",
+															"layout":"vertical",
+															"margin": "xxl",
+															"spacing": "sm",
+															"contents":[{
+																			"type":"box",
+																			"layout":"horizontal",
+																			"contents";[
+																						{
+																								"type":"text",
+																								"text": "1.กฟอ.พธร.",
+																								"size": "sm",
+																								"color": "#555555",
+																								"flex": 0
+																						},
+																						{
+																								"type":"text",
+																								"text": "99.99%",
+																								"size": "sm",
+																								"color": "#555555",
+																								"align": "end"
+																						}
+																						]
+																		},
+																		{
+																			"type":"box",
+																			"layout":"horizontal",
+																			"contents";[
+																						{
+																								"type":"text",
+																								"text": "2.กฟอ.......",
+																								"size": "sm",
+																								"color": "#555555",
+																								"flex": 0
+																						},
+																						{
+																								"type":"text",
+																								"text": "99.98%",
+																								"size": "sm",
+																								"color": "#555555",
+																								"align": "end"
+																						}
+																						]
+																		}
+																		]
 														}]
 										},
 								"footer": {
