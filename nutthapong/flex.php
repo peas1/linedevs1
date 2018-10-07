@@ -1,6 +1,28 @@
 <?php
 //require('./db/connect-db.php');//เรียกใช้ file connect-db
+require('render_msg.php');
 function reply_msg($text,$replyToken)//สร้างข้อความและตอบกลับ
+{
+    $access_token = '7Bkj6AqoRCKOJc08sAW2luAwLn3PT99764/VTeSHnDzCGlc0oXF+ourT4ZVRK01darE/LYd5ihfcuxEbHa30I4qAvzfJNK3EStUU/TKJcfw9xOJxTNo+AMJtXwpQD0zdZsLo/TDUGFUZAqSbN5fWUwdB04t89/1O/w1cDnyilFU=';
+    $messages = flex_msg();
+    $url = 'https://api.line.me/v2/bot/message/reply';
+    $data = [
+                'replyToken' => $replyToken,
+                'messages' => [$messages],
+            ];
+    $post = json_encode($data);
+    $headers = array('Content-Type: application/json', 'Authorization: Bearer ' . $access_token);
+    $ch = curl_init($url);
+    curl_setopt($ch, CURLOPT_CUSTOMREQUEST, "POST");
+    curl_setopt($ch, CURLOPT_RETURNTRANSFER, true);
+    curl_setopt($ch, CURLOPT_POSTFIELDS, $post);
+    curl_setopt($ch, CURLOPT_HTTPHEADER, $headers);
+    curl_setopt($ch, CURLOPT_FOLLOWLOCATION, 1);
+    $result = curl_exec($ch);
+    curl_close($ch);
+    echo $result . "\r\n";
+}
+function reply_flex_msg($text,$replyToken)//สร้างข้อความและตอบกลับ
 {
     $access_token = '7Bkj6AqoRCKOJc08sAW2luAwLn3PT99764/VTeSHnDzCGlc0oXF+ourT4ZVRK01darE/LYd5ihfcuxEbHa30I4qAvzfJNK3EStUU/TKJcfw9xOJxTNo+AMJtXwpQD0zdZsLo/TDUGFUZAqSbN5fWUwdB04t89/1O/w1cDnyilFU=';
     $messages = ['type' => 'text','text' => $text];//สร้างตัวแปร 
@@ -50,7 +72,7 @@ if (!is_null($events['events'])) //check ค่าในตัวแปร $even
 			if($txtin == "flex")
 			{
 				$txtsend = $uid;
-				reply_flexmsg($txtsend,$replyToken);//เรียกใช้ function
+				reply_flex_msg($txtsend,$replyToken);//เรียกใช้ function
 				break;
 			}
 			if($first_char == "@")
