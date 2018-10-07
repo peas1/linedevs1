@@ -81,7 +81,7 @@ function flex_msg()
 											"spacing": "sm",
 											"contents": [{
 													"type": "button",
-													"style": "link",
+													"style": "primary",
 													"height": "sm",
 													"action": {
 																"type": "uri",
