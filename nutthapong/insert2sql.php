@@ -6,8 +6,8 @@
     $conn = new mysqli($server, $username, $password, $db);
 	mysqli_query($conn, "SET NAMES utf8");
 	
-	$name = $_GET["name"];
-	$lastname = $_GET["lastname"];
-	$email = $_GET["email"];
+	$name = $_POST["name"];
+	$lastname = $_POST["lastname"];
+	$email = $_POST["email"];
 	echo $name." ".$lastname." ".$email;
 ?>

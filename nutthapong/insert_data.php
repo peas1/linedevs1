@@ -26,7 +26,7 @@
 		<div class="mt-2 container">
 			<div class="row">
 				<div class="col-lg-2">
-					<form action="insert2sql.php" method="get">
+					<form action="insert2sql.php" method="post">
 						<div class="row">
 							<label for="name">ชื่อ :</label>
 							<input class="form-control" type="text" name="name" id="name" placeholder="ใส่ชื่อของคุณ">
