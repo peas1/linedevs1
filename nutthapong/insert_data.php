@@ -24,7 +24,7 @@
 			</div>
 		</div>
 		<div class="container-fluid">
-			<div class="col-lg-4">
+			<div class="col-lg-2">
 				<div class="row">
 					<label for="name">ชื่อ :</label>
 					<input class="form-control" type="text" name="name" id="name" placeholder="ใส่ชื่อของคุณ">
@@ -42,7 +42,7 @@
 					<input class="btn btn-success btn-block" type="submit">
 				</div>
 			</div>
-			<div class="col-lg-8">
+			<div class="col-lg-10">
 				<div class="table-responsive">
 					<table class="table">
 						<thead>
