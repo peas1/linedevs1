@@ -24,7 +24,7 @@
 			</div>
 		</div>
 		<div class="mt-5 container-fluid" style="background-color:blue;">
-			<div class="row row-center">
+			<div class="row">
 				<div class="col-lg-4 offset-lg-4" style="background-color:red;">
 					<label class="form-control">ชื่อ :</label>
 					<input class="form-control" type="text" name="name" id="name" placeholder="ใส่ชื่อของคุณ">
