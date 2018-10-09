@@ -23,7 +23,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="container-fluid" style="background-color:blue;">
+		<div class="container-fluid">
 			<div class="row">
 				<div class="col-lg-4 offset-lg-4">
 					<label for="name">ชื่อ :</label>
@@ -45,7 +45,7 @@
 			<div class="row">
 				<div class="col-lg-4 offset-lg-4">
 					<label for="email">ชื่อ :</label>
-					<input class="btn-success btn-block" type="submit" name="email" id="email" placeholder="ใส่ email ของคุณ">
+					<input class="btn btn-success btn-block" type="submit" name="email" id="email" placeholder="ใส่ email ของคุณ">
 				</div>
 			</div>
 		</div>
