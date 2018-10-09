@@ -23,7 +23,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="container-fluid" style="background-color:blue;">
+		<div class="mt-5 container-fluid" style="background-color:blue;">
 			<div class="row row-center">
 				<div class="col-lg-4 offset-lg-4" style="background-color:red;">
 					<h4>บันทึกข้อมูล</h4>
