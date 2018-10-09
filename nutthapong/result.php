@@ -25,6 +25,7 @@ margin-bottom: 10px;
     $password = "2e0e0451";
     $db = "heroku_ce52199dd4f50e1";
     $conn = new mysqli($server, $username, $password, $db);
+	mysqli_query($conn, "SET NAMES utf8");
 $keyword = $_GET["keyword"];
 if(isset($keyword))
 {
