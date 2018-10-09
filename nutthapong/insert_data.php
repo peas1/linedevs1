@@ -24,28 +24,37 @@
 			</div>
 		</div>
 		<div class="container-fluid">
-			<div class="row">
-				<div class="col-lg-4 offset-lg-4">
+			<div class="col-lg-4">
+				<div class="row">
 					<label for="name">ชื่อ :</label>
 					<input class="form-control" type="text" name="name" id="name" placeholder="ใส่ชื่อของคุณ">
 				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-4 offset-lg-4">
-					<label for="lastname">ชื่อ :</label>
+				<div class="row">
+					<label for="lastname">นามสกุล :</label>
 					<input class="form-control" type="text" name="lastname" id="lastname" placeholder="ใส่นามสกุลของคุณ">
 				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-4 offset-lg-4">
+				<div class="row">
 					<label for="email">ชื่อ :</label>
 					<input class="form-control" type="text" name="email" id="email" placeholder="ใส่ email ของคุณ">
 				</div>
-			</div>
-			<div class="row">
-				<div class="col-lg-4 offset-lg-4">
+				<div class="row">
 					<label for="email">ชื่อ :</label>
-					<input class="btn btn-success btn-block" type="submit" name="email" id="email" placeholder="ใส่ email ของคุณ">
+					<input class="btn btn-success btn-block" type="submit">
+				</div>
+			</div>
+			<div class="col-lg-8">
+				<div class="table-responsive">
+					<table class="table">
+						<thead>
+							<tr>
+								<th>ชื่อ</th>
+								<th>นามสกุล</th>
+								<th>email</th>
+							</tr>
+						</thead>
+						<tbody>
+						</tbody>
+					</table>
 				</div>
 			</div>
 		</div>
