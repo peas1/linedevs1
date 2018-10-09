@@ -1,4 +1,7 @@
 <?php
+$method = $_SERVER["REQUEST_METHOD"];
+if($method == "POST")
+{
 	$server = "us-cdbr-iron-east-01.cleardb.net";
     $username = "b798786b8aa714";
     $password = "2e0e0451";
@@ -10,4 +13,9 @@
 	$lastname = $_POST["lastname"];
 	$email = $_POST["email"];
 	echo $name." ".$lastname." ".$email;
+}
+else
+{
+	echo "Method Not Allow!!!!";
+}
 ?>
