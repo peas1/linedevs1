@@ -14,6 +14,14 @@
 				text-align:center;
 			}
 		</style>
+		<?php
+			$server = "us-cdbr-iron-east-01.cleardb.net";
+			$username = "b798786b8aa714";
+			$password = "2e0e0451";
+			$db = "heroku_ce52199dd4f50e1";
+			$conn = new mysqli($server, $username, $password, $db);
+			mysqli_query($conn, "SET NAMES utf8");
+		?>
 	</head>
 	<body>
 		<div class="container-fluid" style="background-color:pink;">
@@ -56,6 +64,20 @@
 								</tr>
 							</thead>
 							<tbody>
+								<?php
+									$sql = "SELECT * FROM tbl_nuthapong";
+									$query = mysqli_query($conn,$sql);
+									while($obj = mysqli_fetch_array($query))
+									{
+										echo "<tr>";
+										echo $obj["name"];
+										echo $obj["lastname"];
+										echo $obj["email"];
+										echo "</tr>";
+									}
+								echo "<tr>";
+								
+								?>
 							</tbody>
 						</table>
 					</div>

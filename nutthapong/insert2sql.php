@@ -12,7 +12,8 @@ if($method == "POST")
 	$name = $_POST["name"];
 	$lastname = $_POST["lastname"];
 	$email = $_POST["email"];
-	echo $name." ".$lastname." ".$email;
+	//echo $name." ".$lastname." ".$email;
+	$sql = "INSERT INTO tbl_nuthapong(name,lastname,email) VALUES('$name','$lastname','$email')"
 }
 else
 {
