@@ -47,7 +47,7 @@
 							<label for="email">ชื่อ :</label>
 							<input class="form-control" type="text" name="email" id="email" placeholder="ใส่ email ของคุณ">
 						</div>
-						<div class="row">
+						<div class="mt-2 row">
 							<input class="btn btn-success btn-block" type="submit" value="บันทึก">
 						</div>
 					</form>
