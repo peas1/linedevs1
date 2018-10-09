@@ -35,7 +35,7 @@ function reply_msg($txtback,$replyToken)//สร้างข้อความ�
 			{
 				$replyToken = $event['replyToken']; //เก็บ reply token เอาไว้ตอบกลับ
 				$txtin = $event['message']['text']; //เอาข้อความจากไลน์ใส่ตัวแปร $txtin
-				$sqltext = "SELECT * FROM tbl_nuthapong WHERE name = '".$txtin."'";
+				$sql_text = "SELECT * FROM tbl_nuthapong WHERE name = '".$txtin."'";
 				$query = mysqli_query($conn,$sql_text);
 				while($obj = mysqli_fetch_array($query))
 				{
