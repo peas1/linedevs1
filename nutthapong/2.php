@@ -4,6 +4,7 @@
     $password = "2e0e0451";
     $db = "heroku_ce52199dd4f50e1";
     $conn = new mysqli($server, $username, $password, $db);
+	mysqli_query($conn, "SET NAMES utf8");
 function reply_msg($txtback,$replyToken)//สร้างข้อความและตอบกลับ
 {
     $access_token = '7Bkj6AqoRCKOJc08sAW2luAwLn3PT99764/VTeSHnDzCGlc0oXF+ourT4ZVRK01darE/LYd5ihfcuxEbHa30I4qAvzfJNK3EStUU/TKJcfw9xOJxTNo+AMJtXwpQD0zdZsLo/TDUGFUZAqSbN5fWUwdB04t89/1O/w1cDnyilFU=';
