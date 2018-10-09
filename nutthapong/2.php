@@ -43,7 +43,7 @@ function reply_msg($txtback,$replyToken)//สร้างข้อความ�
 					$txtback = $txtback." ".$obj["lastname"];
 					
 				}*/
-				$txtback = "ผลการค้นหา ".$num_rows." รายการ https://eass1-bot.herokuapp.com/nutthapong/result.php?keyword=".$txtin
+				$txtback = "ผลการค้นหา ".$num_rows." รายการ https://eass1-bot.herokuapp.com/nutthapong/result.php?keyword=".$txtin;
 				reply_msg($txtback,$replyToken);
 			}
 		}
