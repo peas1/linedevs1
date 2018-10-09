@@ -70,13 +70,11 @@
 									while($obj = mysqli_fetch_array($query))
 									{
 										echo "<tr>";
-										echo $obj["name"];
-										echo $obj["lastname"];
-										echo $obj["email"];
+										echo "<td>".$obj["name"]."</td>";
+										echo "<td>".$obj["lastname"]."</td>";
+										echo "<td>".$obj["email"]."</td>";
 										echo "</tr>";
 									}
-								echo "<tr>";
-								
 								?>
 							</tbody>
 						</table>
