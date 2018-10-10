@@ -31,7 +31,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="mt-2 container">
+		<div class="mt-2 container-fluid">
 			<div class="row">
 				<div class="col-lg-2">
 					<form action="insert2sql.php" method="post">
