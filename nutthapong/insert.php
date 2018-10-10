@@ -24,7 +24,7 @@
 				</div>
 			</div>
 		</div>
-		<div class="container"> 
+		<div class="mt-2 container"> 
 			<div class="row">
 				<div class="col-lg-2" >
 					<div class="row">
