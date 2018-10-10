@@ -26,7 +26,7 @@
 		</div>
 		<div class="container"> 
 			<div class="row">
-				<div class="col-lg-2" style="background-color:yellow;">
+				<div class="col-lg-2" >
 					<div class="row">
 						<label for="usr">ชื่อ :</label>
 						<input type="text" class="form-control" name="name" placeholder="ใส่ชื่อของคุณ">
@@ -43,7 +43,7 @@
 						<input class="btn btn-success btn-block" type="submit" value="บันทึก">
 					</div>
 				</div>
-				<div class="col-lg-10" style="background-color:blue;">
+				<div class="col-lg-10">
 					<div class="table-responsive">
 						<table class="table">
 							<thead>
