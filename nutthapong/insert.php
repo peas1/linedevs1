@@ -15,6 +15,10 @@
 			{
 				text-align:center;
 			}
+			body 
+			{
+				font-family: 'Kanit', sans-serif;
+			}
 		</style>
 		<?php
 			$server = "us-cdbr-iron-east-01.cleardb.net";
