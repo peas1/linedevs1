@@ -4,7 +4,7 @@
     $password = "402bbf1f";
     $db = "heroku_821969a41e3a17e";
     $conn = new mysqli($server, $username, $password, $db);
-	mysqli_query($conn, "SET NAMES utf-8");
+	mysqli_query($conn, "SET NAMES utf8");
 	$sql = "SELECT * FROM librarypq";
 	$query = mysqli_query($conn,$sql);
 	while($obj = mysqli_fetch_array($query))
