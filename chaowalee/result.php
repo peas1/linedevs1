@@ -58,7 +58,7 @@ if(isset($keyword))
                     $a=1;
                     while($objsearch = mysqli_fetch_array($query_search))
                     {
-                        echo '<a href="pdf.php?doc.no='.$objsearch["doc_no"].'" class="list-group-item list-group-item-action">';
+                        echo '<a href="pdf.php?doc_no='.$objsearch["doc_no"].'" class="list-group-item list-group-item-action">';
                         echo $a.".<br>";
                         echo "Category : ".$objsearch["keyword"]."<br>";
                         echo "Type : " .$objsearch["type"]."<br>";
