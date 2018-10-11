@@ -15,9 +15,10 @@ if($method == "POST")
 	//echo $name." ".$lastname." ".$email;
 	$sql = "INSERT INTO tbl_nuthapong(name,lastname,email) VALUES('$name','$lastname','$email')";
 	$result = mysqli_query($conn, $sql) or trigger_error($conn->error."[$sql_insert]");
-	echo '<script type="text/javascript">';
-	echo 'window.location.href="insert.php";';
-	echo '</script>';
+	//echo '<script type="text/javascript">';
+	//echo 'window.location.href="insert.php";';
+	//echo '</script>';
+	echo $result;
 }
 else
 {
