@@ -15,7 +15,7 @@
 			{
 				text-align:center;
 			}
-			body 
+			container-fluid 
 			{
 				font-family: 'Kanit', sans-serif;
 			}
@@ -70,14 +70,14 @@
 							</thead>
 							<tbody>
 								<?php
-									$sql = "SELECT * FROM tbl_nuthapong";
+									$sql = "SELECT * FROM inserttesting";
 									$query = mysqli_query($conn,$sql);
 									while($obj = mysqli_fetch_array($query))
 									{
 										echo "<tr>";
-										echo "<td>".$obj["name"]."</td>";
-										echo "<td>".$obj["lastname"]."</td>";
-										echo "<td>".$obj["email"]."</td>";
+										echo "<td>".$obj["number"]."</td>";
+										echo "<td>".$obj["office"]."</td>";
+										
 										echo "</tr>";
 									}
 								?>
