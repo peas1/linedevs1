@@ -34,7 +34,7 @@
     $password = "402bbf1f";
     $db = "heroku_821969a41e3a17e";
     $conn = new mysqli($server, $username, $password, $db);//ประกาศตัวแปร conn เพื่อเชื่อมไปยังฐานข้อมูล เป็นมาตรฐานการเขียนเชื่อมต่อ
-	mysqli_query($conn, "SET NAMES utf-8");
+	mysqli_query($conn, "SET NAMES utf8");
 	$keyword = $_GET["keyword"];
 if(isset($keyword))
 {
