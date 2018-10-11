@@ -23,7 +23,7 @@
 	</head>
 	<body>
 		<?php
-		$link = $_GET["doc.no"];
+		$link = $_GET["doc_no"];
 		$server = "us-cdbr-iron-east-01.cleardb.net";
 		$username = "b21e535520af4b";
 		$password = "402bbf1f";
