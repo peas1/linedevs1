@@ -23,7 +23,7 @@
 	</head>
 	<body>
 		<?php
-		$link = trim($_GET["doc.no"]);
+		$link = $_GET["doc.no"];
 		$server = "us-cdbr-iron-east-01.cleardb.net";
 		$username = "b21e535520af4b";
 		$password = "402bbf1f";
@@ -33,7 +33,8 @@
 		$query_search = mysqli_query($conn,$sql_search);
 		$objsearch = mysqli_fetch_array($query_search);
 		$link1 = $objsearch["link"];
-		echo $link1;
+		echo $link1."<br>";
+		echo $link." ".$sql_search;
 		?>
 		<div class="container">
 			<div class="embed-responsive embed-responsive-210by297">
