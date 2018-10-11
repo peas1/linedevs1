@@ -13,7 +13,7 @@ if($method == "POST")
 	$lastname = $_POST["lastname"];
 	$email = $_POST["email"];
 	//echo $name." ".$lastname." ".$email;
-	$sql = "INSERT INTO tbl_nuthapong(name,lastname,email) VALUES('$name','$lastname','$email')";
+	$sql = "INSERT INTO tbl_nuthapong(namee,lastname,email) VALUES('$name','$lastname','$email')";
 	$result = mysqli_query($conn, $sql) or trigger_error($conn->error."[$sql_insert]");
 	//echo '<script type="text/javascript">';
 	//echo 'window.location.href="insert.php";';
