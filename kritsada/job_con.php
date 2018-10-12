@@ -32,13 +32,15 @@
 		<div class="mt-2 container">
 			<div class="row">
 				<div class="col-md-4 offset-md-4">
-					<div class="row">
-						<label for="usr">คำค้นหา :</label>
-						<input type="text" class="form-control" name="name" placeholder="การไฟฟ้า หรือ ชื่องาน">
-					</div>
-					<div class="mt-2 row">	
-						<input class="btn btn-primary btn-block" type="submit" value="ค้นหา">
-					</div>
+					<form action="job_result.php" method="post">
+						<div class="row">
+							<label for="usr">คำค้นหา :</label>
+							<input type="text" class="form-control" name="keyword" placeholder="การไฟฟ้า หรือ ชื่องาน">
+						</div>
+						<div class="mt-2 row">	
+							<input class="btn btn-primary btn-block" type="submit" value="ค้นหา">
+						</div>
+					</form>
 				</div>
 			</div>
 		</div>
