@@ -22,7 +22,7 @@
 		</style>
 	</head>
 	<body>
-		<div class="container-fluid" style="background-color:#4285F4;">
+		<div class="container-fluid" style="background-color:blue;">
 			<div class="row row-center">
 				<div class="col-sm-12">
 					<h4>ข้อมูลงานก่อสร้าง</h4>
