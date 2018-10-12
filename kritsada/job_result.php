@@ -46,7 +46,9 @@
 		</div>
 		<div class="mt-2 container">
 			<div class="row row-center">
-				echo "ค้นพบ ".$num." รายการ";
+				<?php
+					echo "ค้นพบ ".$num." รายการ";
+				?>
 			</div>
 			<div class="row">
 				<div class="col-md-4 offset-md-4">
