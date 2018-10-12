@@ -15,21 +15,21 @@
 			{
 				text-align:center;
 			}
-			container-fluid 
+			body
 			{
 				font-family: 'Kanit', sans-serif;
 			}
 		</style>
 	</head>
 	<body>
-		<div class="container-fluid" style="background-color:#4285F4;">
-			<div class="mt-2 row row-center">
+		<div class="container" style="background-color:#4285F4;">
+			<div class="row row-center">
 				<div class="col-md-12">
 					<h4>ข้อมูลงานก่อสร้าง</h4>
 				</div>
 			</div>
 		</div>
-		<div class="mt-2 container-fluid">
+		<div class="mt-2 container">
 			<div class="row">
 				<div class="col-md-4 offset-md-4">
 					<div class="row">
