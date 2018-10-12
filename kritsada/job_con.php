@@ -31,7 +31,7 @@
 		</div>
 		<div class="mt-2 container">
 			<div class="row">
-				<div class="col-md-4 offset-md-4">
+				<div class="col-sm-4 offset-sm-4">
 					<form action="job_result.php" method="post">
 						<div class="row">
 							<label for="usr">คำค้นหา :</label>
