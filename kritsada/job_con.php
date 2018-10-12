@@ -24,7 +24,7 @@
 	<body>
 		<div class="container" style="background-color:#4285F4;">
 			<div class="row row-center">
-				<div class="col-md-12">
+				<div class="col-sm-12">
 					<h4>ข้อมูลงานก่อสร้าง</h4>
 				</div>
 			</div>
