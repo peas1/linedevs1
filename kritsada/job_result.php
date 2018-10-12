@@ -32,7 +32,7 @@
 			$keyword = $_POST["keyword"];
 			if(isset($keyword))
 			{
-				$sql_search ="SELECT * FROM tbl_improve WHERE name LIKE '%".$keyword."%'";
+				$sql_search ="SELECT * FROM tbl_improve WHERE pea LIKE '%".$keyword."%' OR detail LIKE '%".$keyword."%'";
 				$query_search = mysqli_query($conn,$sql_search);
 			}
 		?>
