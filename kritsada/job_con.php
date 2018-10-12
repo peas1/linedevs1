@@ -22,9 +22,9 @@
 		</style>
 	</head>
 	<body>
-		<div class="container-fluid" style="background-color:blue;">
+		<div class="container-fluid" style="background-color:secondary-color;">
 			<div class="row row-center">
-				<div class="col-sm-12">
+				<div class="col-lg-12">
 					<h4>ข้อมูลงานก่อสร้าง</h4>
 				</div>
 			<div>
@@ -37,10 +37,10 @@
 						<input type="text" class="form-control" name="name" placeholder="การไฟฟ้า หรือ ชื่องาน">
 					</div>
 					<div class="mt-2 row">	
-						<input class="btn btn-primary btn-block" type="submit" value="ค้นหา">
+						<input class="btn btn-secondary btn-block" type="submit" value="ค้นหา">
 					<div>
 				</div>
 			<div>
-		<div>
+		</div>
 	</body>
 </html>
