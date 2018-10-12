@@ -34,6 +34,7 @@
 			{
 				$sql_search ="SELECT * FROM tbl_improve WHERE pea LIKE '%".$keyword."%' OR detail LIKE '%".$keyword."%'";
 				$query_search = mysqli_query($conn,$sql_search);
+				$num = mysqli_num_rows($query_search);
 			}
 		?>
 		<div class="container" style="background-color:#4285F4;">
@@ -44,6 +45,9 @@
 			</div>
 		</div>
 		<div class="mt-2 container">
+			<div class="row row-center">
+				echo "ค้นพบ ".$num." รายการ";
+			</div>
 			<div class="row">
 				<div class="col-md-4 offset-md-4">
 					<div class="list-group">
