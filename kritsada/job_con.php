@@ -24,14 +24,14 @@
 	<body>
 		<div class="container" style="background-color:#4285F4;">
 			<div class="row row-center">
-				<div class="col-md-12">
+				<div class="col-sm-12">
 					<h4>ข้อมูลงานก่อสร้าง</h4>
 				</div>
 			</div>
 		</div>
 		<div class="mt-2 container">
 			<div class="row">
-				<div class="col-md-4 col-lg-4 col-xs-4 col-sm-4  offset-sm-4 offset-md-4 offset-lg-4 offset-xs-4">
+				<div class="col-lg-4 col-sm-push-1">
 					<form action="job_result.php" method="post">
 						<div class="row">
 							<label for="usr">คำค้นหา :</label>
