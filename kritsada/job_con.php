@@ -29,7 +29,7 @@
 				</div>
 			<div>
 		<div>
-		<div class="container-fluid">
+		<div class="mt-2 container">
 			<div class="row">
 				<div class="col-sm-10 offset-sm-1">
 					<div class="row">
