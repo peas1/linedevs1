@@ -22,13 +22,13 @@
 		</style>
 	</head>
 	<body>
-		<div class="container-fluid" style="background-color:secondary-color;">
+		<div class="container-fluid" style="background-color:#aa66cc;">
 			<div class="row row-center">
 				<div class="col-lg-12">
 					<h4>ข้อมูลงานก่อสร้าง</h4>
 				</div>
-			<div>
-		<div>
+			</div>
+		</div>
 		<div class="mt-2 container">
 			<div class="row">
 				<div class="col-sm-8 offset-sm-2">
@@ -38,9 +38,9 @@
 					</div>
 					<div class="mt-2 row">	
 						<input class="btn btn-secondary btn-block" type="submit" value="ค้นหา">
-					<div>
+					</div>
 				</div>
-			<div>
+			</div>
 		</div>
 	</body>
 </html>
