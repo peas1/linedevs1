@@ -22,22 +22,22 @@
 		</style>
 	</head>
 	<body>
-		<div class="container-fluid" style="background-color:#aa66cc;">
+		<div class="container-fluid" style="background-color:#4285F4;">
 			<div class="mt-2 row row-center">
-				<div class="col-lg-12">
+				<div class="col-md-12">
 					<h4>ข้อมูลงานก่อสร้าง</h4>
 				</div>
 			</div>
 		</div>
-		<div class="mt-2 ml-2 mr-2 container">
+		<div class="mt-2 container-fluid">
 			<div class="row">
-				<div class="col-sm-8 offset-sm-2">
+				<div class="col-md-4 offset-md-4">
 					<div class="row">
 						<label for="usr">คำค้นหา :</label>
 						<input type="text" class="form-control" name="name" placeholder="การไฟฟ้า หรือ ชื่องาน">
 					</div>
 					<div class="mt-2 row">	
-						<input class="btn btn-secondary btn-block" type="submit" value="ค้นหา">
+						<input class="btn btn-primary btn-block" type="submit" value="ค้นหา">
 					</div>
 				</div>
 			</div>
