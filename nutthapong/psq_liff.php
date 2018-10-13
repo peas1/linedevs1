@@ -15,7 +15,9 @@
             <button id="sendmessagebutton">Send Message</button>
         </div>
     </div>
-
+	<div class="container">
+		<input type="text" id="useridprofilefield" placeholder="นี่แนะ">
+	</div>
     <div id="profileinfo">
         <h2>Profile</h2>
         <a href="#" onclick="toggleProfileData()">Close Profile</a>
