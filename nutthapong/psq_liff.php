@@ -18,8 +18,8 @@
 	<div class="container">
 		<p type="text" id="useridfield" name="useridfield" placeholder="นี่แนะ"></p>
 		<?php
-			echo $useridfield." <<<<<<<<<<<<<<<<";
-		?>
+			$useridfield = ?> <script type="text/javascript"> document.getElementById('useridfield').value; </script>
+		<?php echo ">>>>>>>>>>> ".$useridfield." <<<<<<<<<"; ?>
 	</div>
     <div id="profileinfo">
         <h2>Profile</h2>
