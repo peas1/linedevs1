@@ -5,6 +5,8 @@ window.onload = function (e)
 												document.getElementById('lid').value = profile.userId;
 												document.getElementById('displayname').value = profile.displayName;
 											}
-				};
-
-
+				}).catch((err) => 
+								{
+									console.log('error', err);
+								});
+				
