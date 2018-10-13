@@ -16,7 +16,7 @@
         </div>
     </div>
 	<div class="container">
-		<input type="text" id="useridprofilefield" placeholder="นี่แนะ">
+		<input type="text" id="useridfield" placeholder="นี่แผแอกออนะ">
 	</div>
     <div id="profileinfo">
         <h2>Profile</h2>
