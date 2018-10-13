@@ -44,15 +44,14 @@ if (!is_null($events['events'])) //check ค่าในตัวแปร $even
             $first_char = substr($txtin,0,1);//ตัดเอาเฉพาะตัวอักษรตัวแรก
 			if($first_char == "@")
 			{
-				$office_id = trim(substr($txtin,1,strlen($txtin)));///ได้รหัสการไฟฟ้า 
+				$keyword = trim(substr($txtin,1,strlen($txtin)));///ได้รหัสการไฟฟ้า 
 				//reply_msg($office_id,$replyToken);
-				$sql_area = "SELECT * FROM tbl_improve WHERE detail LIKE '%".$office_id."%'";
-				$query_area = mysqli_query($conn,$sql_area);
-				mysqli_query($conn, "SET NAMES utf8");
-				$num_row = mysqli_num_rows($query_area);// นับจำนวนที่หาเจอ
-				$txtsend = "ค้นพบ ".$num_row." รายการ";
+				$sql_search = "SELECT * FROM tbl_improve WHERE pea LIKE '%".$keyword."%' OR detail LIKE '%".$keyword."%'";
+				$query_search = mysqli_query($conn,$sql_search);
+				$num = mysqli_num_rows($query_search);// นับจำนวนที่หาเจอ
+				$txtsend = "ค้นพบ ".$num." รายการ";
 				$a=1;
-				while($obj = mysqli_fetch_array($query_area))
+				while($obj = mysqli_fetch_array($query_search))
 				{
 					$txtsend = $txtsend ."\n\n".$a.") ".$obj["pea"]."\nงาน : ".$obj["detail"]."\nWBS: ".$obj["wbs"].
 					"\nอนุมัติครั้งที่ ".$obj["approval_no"]."\nหนังสือที่ กวว.(ปร.) ".$obj["eap"]." ลว. ".$obj["date"];
