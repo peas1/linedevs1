@@ -1,8 +1,14 @@
 window.onload = function (e) 
 {
-  liff.getProfile().then(function (profile) 
-  {
-	  document.getElementById('lid').textContent = profile.userId;
-	  document.getElementById('displayname').textContent = profile.displayName;
-  }  
+    liff.init(function (data) 
+	{
+        initializeApp(data);
+    });
 };
+
+function initializeApp(data) 
+{
+    document.getElementById('lid').textContent = data.language;
+    document.getElementById('displayname').textContent = data.context.viewType;
+}
+
