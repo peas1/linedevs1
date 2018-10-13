@@ -1,8 +1,8 @@
 <html>
 	<head>
-		<title>ข้อมูลงานก่อสร้าง</title>
+		<title>PSQ V.2</title>
 		<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1.0," charset="utf-8">
-		<title>BOT TRAIN PEA S.1</title>
+		<title>PSQ V.2</title>
 		<script src="https://d.line-scdn.net/liff/1.0/sdk.js"></script>
 		<script src="liff-starter.js"></script>
 		<link href="https://fonts.googleapis.com/css?family=Kanit" rel="stylesheet">
@@ -27,7 +27,7 @@
 		<div class="container" style="background-color:#4285F4;">
 			<div class="row row-center">
 				<div class="col-lg-12">
-					<h4>ข้อมูลงานก่อสร้าง</h4>
+					<h4>PSQ V.2</h4>
 				</div>
 			</div>
 		</div>
