@@ -18,7 +18,7 @@
 	<div class="container">
 		<p type="text" id="useridfield" placeholder="นี่แนะ"></p>
 		<?php
-			$lid = echo "<script type='javascript'> document.getElementById('useridfield').value</script>";
+			$lid = echo "<script type='javascript'> document.getElementById('useridfield').value;</script>";
 			echo =$lid;
 		?>
 	</div>
