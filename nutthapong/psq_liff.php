@@ -16,7 +16,7 @@
         </div>
     </div>
 	<div class="container">
-		<input type="text" id="useridfield" placeholder="นี่แผแอกออนะ">
+		<input type="text" id="useridfield" placeholder="นี่แนะ">
 	</div>
     <div id="profileinfo">
         <h2>Profile</h2>
@@ -52,7 +52,7 @@
             </tr>
             <tr>
                 <th>context.userId</th>
-                <td id="useridfield"></td>
+                <td id="useridfield1"></td>
             </tr>
             <tr>
                 <th>context.utouId</th>
