@@ -46,9 +46,11 @@ if (!is_null($events['events'])) //check ค่าในตัวแปร $even
 			{
 				$keyword = trim(substr($txtin,1,strlen($txtin)));///ได้รหัสการไฟฟ้า 
 				//reply_msg($office_id,$replyToken);
+				mysqli_query($conn, "SET NAMES utf8");
 				$sql_search = "SELECT * FROM tbl_improve WHERE pea LIKE '%".$keyword."%' OR detail LIKE '%".$keyword."%'";
 				$query_search = mysqli_query($conn,$sql_search);
 				$num = mysqli_num_rows($query_search);// นับจำนวนที่หาเจอ
+				mysqli_query($squery_search, "SET NAMES utf8");
 				$txtsend = "ค้นพบ ".$num." รายการ";
 				$a=1;
 				while($obj = mysqli_fetch_array($query_search))
