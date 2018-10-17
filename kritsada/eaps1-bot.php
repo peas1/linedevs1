@@ -64,7 +64,7 @@ if (!is_null($events['events'])) //check ค่าในตัวแปร $even
 					$txtsend = "ผลการค้นหา '" .$keyword. "' พบ ".$num." รายการ"."\n"."\nโปรดระบุคำค้นหาใหม่ ที่มีรายละเอียดมากขึ้น";
 				} else if ($num = "0") {
 					$txtsend = "ผลการค้นหา '" .$keyword. "' พบ ".$num." รายการ"."\n"."\nโปรดระบุคำค้นหาใหม่";
-				} else if (num < "20") {
+				} else if ($num > "0" and < "20") {
 					$txtsend = "ผลการค้นหา '" .$keyword. "' พบ ".$num." รายการ";
 				$a=1;
 				while($objsearch = mysqli_fetch_array($query_search))
