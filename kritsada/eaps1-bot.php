@@ -62,7 +62,7 @@ if (!is_null($events['events'])) //check ค่าในตัวแปร $even
 				//$num = mysqli_num_rows($query_search);// นับจำนวนที่หาเจอ
 				if ($num >= "20")
 					{
-					$txtsend = "ผลการค้นหา '" .$keyword. "' พบ ".$num." รายการ"."\nจำนวนรายการที่จะแสดงมากเกินไป!!!"."\nโปรดระบุคำค้นหาใหม่ ที่มีรายละเอียดมากขึ้น";
+					$txtsend = "ผลการค้นหา '" .$keyword. "' พบ ".$num." รายการ"."\n"."\nโปรดระบุคำค้นหาใหม่ ที่มีรายละเอียดมากขึ้น";
 					}
 				//$a=1;
 				//while($objsearch = mysqli_fetch_array($query_search))
