@@ -41,7 +41,8 @@ if (!is_null($events['events'])) //check ค่าในตัวแปร $even
             $replyToken = $event['replyToken']; //เก็บ reply token เอาไว้ตอบกลับ
             $source_type = $event['source']['type'];//เก็บที่มาของ event(user หรือ group)
             $txtin = $event['message']['text'];//เอาข้อความจากไลน์ใส่ตัวแปร $txtin
-            $first_char = substr($txtin,0,1);//ตัดเอาเฉพาะตัวอักษรตัวแรก
+            $txtin = "@หนอง";
+			$first_char = substr($txtin,0,1);//ตัดเอาเฉพาะตัวอักษรตัวแรก
 			if($first_char == "@")
 			{
 			$server = "us-cdbr-iron-east-01.cleardb.net";
@@ -62,13 +63,13 @@ if (!is_null($events['events'])) //check ค่าในตัวแปร $even
 				//$num = mysqli_num_rows($query_search);// นับจำนวนที่หาเจอ
 			
 				$txtsend = "ผลการค้นหา '" .$keyword. "' พบ ".$num." รายการ";
-				$a=1;
-				while($objsearch = mysqli_fetch_array($query_search))
-				{
-					$txtsend = $txtsend ."\n\n".$a.") ".$objsearch["pea"]."\nงาน : ".$objsearch["detail"]."\nWBS: ".$objsearch["wbs"].
-					"\nอนุมัติครั้งที่ ".$objsearch["approval_no"]."\nหนังสือที่ กวว.(ปร.) ".$objsearch["eap"]." ลว. ".$objsearch["date"];
-					$a = $a+1;
-				}
+				//$a=1;
+				//while($objsearch = mysqli_fetch_array($query_search))
+				//{
+					//$txtsend = $txtsend ."\n\n".$a.") ".$objsearch["pea"]."\nงาน : ".$objsearch["detail"]."\nWBS: ".$objsearch["wbs"].
+					//"\nอนุมัติครั้งที่ ".$objsearch["approval_no"]."\nหนังสือที่ กวว.(ปร.) ".$objsearch["eap"]." ลว. ".$objsearch["date"];
+					//$a = $a+1;
+				//}
 				reply_msg($txtsend,$replyToken);//เรียกใช้ function
 				//reply_msg($office_id,$replyToken);//เรียกใช้ function
 				break;
@@ -77,4 +78,5 @@ if (!is_null($events['events'])) //check ค่าในตัวแปร $even
     }
 }
 echo "OKJAA";
+echo "$txtsend";
 ?>
