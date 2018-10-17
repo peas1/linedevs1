@@ -63,14 +63,14 @@ if (!is_null($events['events'])) //check ค่าในตัวแปร $even
 				if ($num >= "20")
 					{
 					$txtsend = "ผลการค้นหา '" .$keyword. "' พบ ".$num." รายการ"."\n"."\nโปรดระบุคำค้นหาใหม่ ที่มีรายละเอียดมากขึ้น";
-					}
-				//$a=1;
-				//while($objsearch = mysqli_fetch_array($query_search))
-				//{
-					//$txtsend = $txtsend ."\n\n".$a.") ".$objsearch["pea"]."\nงาน : ".$objsearch["detail"]."\nWBS: ".$objsearch["wbs"].
-					//"\nอนุมัติครั้งที่ ".$objsearch["approval_no"]."\nหนังสือที่ กวว.(ปร.) ".$objsearch["eap"]." ลว. ".$objsearch["date"];
-					//$a = $a+1;
-				//}
+					} else {
+				$a=1;
+				while($objsearch = mysqli_fetch_array($query_search))
+				{
+					$txtsend = $txtsend ."\n\n".$a.") ".$objsearch["pea"]."\nงาน : ".$objsearch["detail"]."\nWBS: ".$objsearch["wbs"].
+					"\nอนุมัติครั้งที่ ".$objsearch["approval_no"]."\nหนังสือที่ กวว.(ปร.) ".$objsearch["eap"]." ลว. ".$objsearch["date"];
+					$a = $a+1;
+				}
 				reply_msg($txtsend,$replyToken);//เรียกใช้ function
 				//reply_msg($office_id,$replyToken);//เรียกใช้ function
 				break;
