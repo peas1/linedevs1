@@ -1,11 +1,11 @@
 <?php
 //require('./db/connect-db.php');//เรียกใช้ file connect-db
-//	$server = "us-cdbr-iron-east-01.cleardb.net";
-//	$username = "bb638a0b9e5724";
-//	$password = "3556cc19";
-//	$db = "heroku_5663ecc9ac15f3e";
-//   $conn = new mysqli($server, $username, $password, $db);
-//    mysqli_query($conn, "SET NAMES utf8");
+	$server = "us-cdbr-iron-east-01.cleardb.net";
+	$username = "bb638a0b9e5724";
+	$password = "3556cc19";
+	$db = "heroku_5663ecc9ac15f3e";
+    $conn = new mysqli($server, $username, $password, $db);
+    mysqli_query($conn, "SET NAMES utf8");
 	
 function reply_msg($text,$replyToken)//สร้างข้อความและตอบกลับ
 {
@@ -44,42 +44,54 @@ if (!is_null($events['events'])) //check ค่าในตัวแปร $even
             $first_char = substr($txtin,0,1);//ตัดเอาเฉพาะตัวอักษรตัวแรก
 			if($first_char == "@")
 			{
-			$server = "us-cdbr-iron-east-01.cleardb.net";
-			$username = "bb638a0b9e5724";
-			$password = "3556cc19";
-			$db = "heroku_5663ecc9ac15f3e";
-			$conn = new mysqli($server, $username, $password, $db);
-			mysqli_query($conn, "SET NAMES utf8");
-			
-				$keyword = substr($txtin,1,strlen($txtin));///ได้รหัสการไฟฟ้า 
+				$office_id = trim(substr($txtin,1,strlen($txtin)));///ได้รหัสการไฟฟ้า 
 				//reply_msg($office_id,$replyToken);
-				$query_search = mysqli_query($conn, "SELECT * FROM tbl_improve WHERE detail LIKE '%".$keyword."%'");
-				mysqli_query($query_search, "SET NAMES utf8");	
-				$num = mysqli_num_rows($query_search);
-
-				//$sql_search ="SELECT * FROM tbl_improve WHERE pea LIKE '%".$keyword."%' OR detail LIKE '%".$keyword."%'";
-				//$query_search = mysqli_query($conn,$sql_search);
-				//$num = mysqli_num_rows($query_search);// นับจำนวนที่หาเจอ
-				if ($num >= "20") {
-					$txtsend = "ผลการค้นหา '" .$keyword. "' พบ ".$num." รายการ"."\n"."\nโปรดระบุคำค้นหาใหม่ ที่มีรายละเอียดมากขึ้น";
-				} else 
-					{
-					$txtsend = "ผลการค้นหา '" .$keyword. "' พบ ".$num." รายการ";
-					$a=1;
-					while($objsearch = mysqli_fetch_array($query_search))
+				$sql_area = "SELECT * FROM tbl_improve WHERE detail LIKE '%".$office_id."%'";
+				$query_area = mysqli_query($conn,$sql_area);
+				mysqli_query($conn, "SET NAMES utf8");
+				$num_row = mysqli_num_rows($query_area);// นับจำนวนที่หาเจอ
+				$txtsend = "ค้นพบ ".$num_row." รายการ";
+				$a=1;
+				while($obj = mysqli_fetch_array($query_area))
 				{
-					$txtsend = $txtsend ."\n\n".$a.") ".$objsearch["pea"]."\nชื่องาน : ".$objsearch["detail"]."\nWBS: ".$objsearch["wbs"].
-					"\nอนุมัติครั้งที่ ".$objsearch["approval_no"]."\nหนังสือที่ กวว.(ปร.) ".$objsearch["eap"]." ลว. ".$objsearch["date"];
+					$txtsend = $txtsend ."\n\n".$a.") ".$obj["pea"]."\nงาน : ".$obj["detail"]."\nWBS: ".$obj["wbs"];
 					$a = $a+1;
 				}
-					}
 				reply_msg($txtsend,$replyToken);//เรียกใช้ function
 				//reply_msg($office_id,$replyToken);//เรียกใช้ function
 				break;
-			}      
+			}
+         /*ลงทะเบียนกลุ่ม*/   
+            if($first_char == "/" AND $source_type == "group" )//ถ้าตัวอักษรตัวแรกคือ /
+            {
+                $semicol_pos = strpos($txtin,":");//เก็บค่าตำแหน่งของ : ในข้อความที่เข้ามา
+                if($semicol_pos == "")
+                {
+                    $txtsend = "รูปแบบคำสั่งไม่ถูกต้อง";
+                    reply_msg($txtsend,$replyToken);//เรียกใช้ function
+                    break;
+                }
+                $command = substr($txtin,1,$semicol_pos-1);//เก็บค่า คำสั่ง 
+                if($command == "regist")//ถ้าคำสั่งคือ regist
+                {
+                    $group_name = substr($txtin,8,strlen($txtin));//เก็บชื่อกลุ่ม
+                    $group_id = $event['source']['groupId'];//เก็บ group id
+                    $sql_group = "SELECT * FROM tbl_group WHERE group_id ='$group_id'";
+                    $group_query = mysqli_query($conn,$sql_group);
+                    if(mysqli_num_rows($group_query) > 0)
+                    {
+                        $txtsend = "กลุ่มนี้ได้มีการลงทะเบียนไว้แล้ว";
+                        reply_msg($txtsend,$replyToken);//เรียกใช้ function
+                        break;
+                    }
+                    $sql_insert_group = "INSERT INTO tbl_group(group_name,group_id,status) VALUES('$group_name','$group_id','A')";
+                    mysqli_query($conn, $sql_insert_group);
+                    $txtsend = "ลงทะเบียนกลุ่มและเปิดใช้งานเรียบร้อยแล้วเรียบร้อยแล้ว";
+                    reply_msg($txtsend,$replyToken);
+                }
+            }
+        /*จบลงทะเบียนกลุ่ม*/       
         }
     }
 }
 echo "OKJAA";
-echo "$txtsend";
-?>
