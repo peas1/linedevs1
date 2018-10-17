@@ -60,11 +60,12 @@ if (!is_null($events['events'])) //check ค่าในตัวแปร $even
 				//$sql_search ="SELECT * FROM tbl_improve WHERE pea LIKE '%".$keyword."%' OR detail LIKE '%".$keyword."%'";
 				//$query_search = mysqli_query($conn,$sql_search);
 				//$num = mysqli_num_rows($query_search);// นับจำนวนที่หาเจอ
-				if ($num >= "20")
-					{
+				if ($num >= "20") {
 					$txtsend = "ผลการค้นหา '" .$keyword. "' พบ ".$num." รายการ"."\n"."\nโปรดระบุคำค้นหาใหม่ ที่มีรายละเอียดมากขึ้น";
-					} 
-					else {
+				} else if ($num = "0") {
+					$txtsend = "ผลการค้นหา '" .$keyword. "' พบ ".$num." รายการ"."\n"."\nโปรดระบุคำค้นหาใหม่";
+				} else if (num < "20") {
+					$txtsend = "ผลการค้นหา '" .$keyword. "' พบ ".$num." รายการ";
 				$a=1;
 				while($objsearch = mysqli_fetch_array($query_search))
 				{
