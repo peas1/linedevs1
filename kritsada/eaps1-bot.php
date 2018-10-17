@@ -53,14 +53,14 @@ if (!is_null($events['events'])) //check ค่าในตัวแปร $even
 			
 				$keyword = substr($txtin,1,strlen($txtin));///ได้รหัสการไฟฟ้า 
 				//reply_msg($office_id,$replyToken);
-				$sql_search ="SELECT * FROM tbl_improve WHERE pea LIKE '%".$keyword."%' OR detail LIKE '%".$keyword."%'";
-				$query_search = mysqli_query($conn,$sql_search);
+				$query_search = mysqli_query($conn, "SELECT * FROM tbl_improve WHERE detail LIKE '%".$keyword."%'");
+				mysqli_query($query_search, "SET NAMES utf8");	
 				$num = mysqli_num_rows($query_search);
 
 				//$sql_search ="SELECT * FROM tbl_improve WHERE pea LIKE '%".$keyword."%' OR detail LIKE '%".$keyword."%'";
 				//$query_search = mysqli_query($conn,$sql_search);
 				//$num = mysqli_num_rows($query_search);// นับจำนวนที่หาเจอ
-				mysqli_query($query_search, "SET NAMES utf8");
+			
 				$txtsend = "ค้นพบ ".$num." รายการ";
 				$a=1;
 				while($objsearch = mysqli_fetch_array($query_search))
