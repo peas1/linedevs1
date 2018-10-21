@@ -77,9 +77,9 @@ if (!is_null($events['events'])) //check ค่าในตัวแปร $even
 				//mysqli_query($conn, "SET NAMES UTF8");
 			
 				$keyword = substr($txtin,1,strlen($txtin)); //สกัดคำค้นหาออกมา 
-				$query_search = mysqli_query($conn, "SELECT * FROM tbl_improve WHERE detail LIKE '%".$keyword."%'");
-				mysqli_query($query_search, "SET NAMES UTF8");	
-				$num = mysqli_num_rows($query_search);
+				//$query_search = mysqli_query($conn, "SELECT * FROM tbl_improve WHERE detail LIKE '%".$keyword."%'");
+				//mysqli_query($query_search, "SET NAMES UTF8");	
+				//$num = mysqli_num_rows($query_search);
 				reply_flex_msg($keyword,$replyToken);
 				
 				//if ($num >= "20") {
