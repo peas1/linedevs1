@@ -2,7 +2,13 @@
 
 function flex_msg($keyword)
 {
-	require('connect-db.php');
+	$server = "us-cdbr-iron-east-01.cleardb.net";
+	$username = "bb638a0b9e5724";
+	$password = "3556cc19";
+	$db = "heroku_5663ecc9ac15f3e";
+	$conn = new mysqli($server, $username, $password, $db);
+	mysqli_query($conn, "SET NAMES UTF8");
+	
 	$sql_key_search = mysqli_query($conn, "SELECT * FROM tbl_improve WHERE detail LIKE '%".$keyword."%'");
 	//$sql_key_search = "SELECT * FROM tbl_standard WHERE keyword LIKE '%".$keyword."%' OR doc_no LIKE '%".$keyword."%' OR discription LIKE '%".$keyword."%'";
 	$key_query = mysqli_query($conn,$sql_key_search);
