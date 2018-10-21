@@ -49,12 +49,12 @@ if (!is_null($events['events'])) //check ค่าในตัวแปร $even
 			$password = "3556cc19";
 			$db = "heroku_5663ecc9ac15f3e";
 			$conn = new mysqli($server, $username, $password, $db);
-			mysqli_query($conn, "SET NAMES utf8");
+			mysqli_query($conn, "SET NAMES UTF8");
 			
 				$keyword = substr($txtin,1,strlen($txtin));///ได้รหัสการไฟฟ้า 
 				//reply_msg($office_id,$replyToken);
 				$query_search = mysqli_query($conn, "SELECT * FROM tbl_improve WHERE detail LIKE '%".$keyword."%'");
-				mysqli_query($query_search, "SET NAMES utf8");	
+				mysqli_query($query_search, "SET NAMES UTF8");	
 				$num = mysqli_num_rows($query_search);
 
 				//$sql_search ="SELECT * FROM tbl_improve WHERE pea LIKE '%".$keyword."%' OR detail LIKE '%".$keyword."%'";
