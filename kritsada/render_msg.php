@@ -11,10 +11,12 @@ function flex_msg($keyword)
 	
 	$sql_key_search = mysqli_query($conn, "SELECT * FROM tbl_improve WHERE detail LIKE '%".$keyword."%'");
 	//$sql_key_search = "SELECT * FROM tbl_standard WHERE keyword LIKE '%".$keyword."%' OR doc_no LIKE '%".$keyword."%' OR discription LIKE '%".$keyword."%'";
-	$key_query = mysqli_query($conn,$sql_key_search);
+	//$key_query = mysqli_query($conn,$sql_key_search);
     mysqli_query($key_query, "SET NAMES UTF8");
 	$numrows = mysqli_num_rows($key_query);
-	$objsearch = mysqli_fetch_array($key_query);
+	
+	reply_msg($numrows,$replyToken); //ลองใส่
+	//$objsearch = mysqli_fetch_array($key_query);
 	if($numrows > 1)
 	{
 		$url = "line://app/1544181630-JP9L0Xmj?keyword=".$keyword;
