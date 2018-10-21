@@ -82,20 +82,20 @@ if (!is_null($events['events'])) //check ค่าในตัวแปร $even
 				$num = mysqli_num_rows($query_search);
 				reply_flex_msg($keyword,$replyToken);
 				
-				if ($num >= "20") {
-					$txtsend = "ผลการค้นหา '" .$keyword. "' พบ ".$num." รายการ"."\n"."\nโปรดระบุคำค้นหาใหม่ ที่มีรายละเอียดมากขึ้น";
-				} else 
-					{
-					$txtsend = "ผลการค้นหา '" .$keyword. "' พบ ".$num." รายการ";
-					$a=1;
-					while($objsearch = mysqli_fetch_array($query_search))
-				{
-					$txtsend = $txtsend ."\n\nงานที่ ".$a."\nของ : ".$objsearch["office"]."\nชื่องาน : ".$objsearch["detail"]."\nWBS : ".$objsearch["wbs"].
-					"\nอนุมัติครั้งที่ ".$objsearch["no"]."\nหนังสือที่ ".$objsearch["approval"]." ลว. ".$objsearch["date"];
-					$a = $a+1;
-				}
-					}
-				reply_msg($txtsend,$replyToken);//เรียกใช้ function
+				//if ($num >= "20") {
+					//$txtsend = "ผลการค้นหา '" .$keyword. "' พบ ".$num." รายการ"."\n"."\nโปรดระบุคำค้นหาใหม่ ที่มีรายละเอียดมากขึ้น";
+				//} else 
+					//{
+					//$txtsend = "ผลการค้นหา '" .$keyword. "' พบ ".$num." รายการ";
+					//$a=1;
+					//while($objsearch = mysqli_fetch_array($query_search))
+				//{
+					//$txtsend = $txtsend ."\n\nงานที่ ".$a."\nของ : ".$objsearch["office"]."\nชื่องาน : ".$objsearch["detail"]."\nWBS : ".$objsearch["wbs"].
+					//"\nอนุมัติครั้งที่ ".$objsearch["no"]."\nหนังสือที่ ".$objsearch["approval"]." ลว. ".$objsearch["date"];
+					//$a = $a+1;
+				//}
+					//}
+				//reply_msg($txtsend,$replyToken);//เรียกใช้ function
 				//reply_msg($office_id,$replyToken);//เรียกใช้ function
 				break;
 			}      
