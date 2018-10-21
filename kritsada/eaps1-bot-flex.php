@@ -1,5 +1,6 @@
 <?php
 	require('./db/connect-db.php');//เรียกใช้ file connect-db
+	require('render_msg.php');
 //	$server = "us-cdbr-iron-east-01.cleardb.net";
 //	$username = "bb638a0b9e5724";
 //	$password = "3556cc19";
