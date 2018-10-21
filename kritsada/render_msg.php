@@ -2,7 +2,7 @@
 
 function flex_msg($keyword)
 {
-	require('./db/connect-db.php');
+	require('connect-db.php');
 	$sql_key_search = mysqli_query($conn, "SELECT * FROM tbl_improve WHERE detail LIKE '%".$keyword."%'");
 	//$sql_key_search = "SELECT * FROM tbl_standard WHERE keyword LIKE '%".$keyword."%' OR doc_no LIKE '%".$keyword."%' OR discription LIKE '%".$keyword."%'";
 	$key_query = mysqli_query($conn,$sql_key_search);
@@ -16,7 +16,7 @@ function flex_msg($keyword)
 	}
 	else if($numrows == 1)
 	{
-		$url = "line://app/1544181630-l71VdJ0m?link=".$objsearch["doc_no"];
+		$url = "line://app/1544181630-l71VdJ0m?link=".$objsearch["detail"];
 		$txtresult = "จำนวน ".$numrows." รายการ";
 		$btn_txt = "รายละเอียดเพิ่มเติม";
 	}
@@ -24,7 +24,7 @@ function flex_msg($keyword)
 	{
 		$url = "https://nutt-i.com/psqv2";
 		$txtresult = "ไม่พบข้อมูล";
-		$btn_txt = "ติดต่อผู้ดูแล";
+		$btn_txt = "กรุณาเปลี่ยนคำค้นหาใหม่";
 	}
 	$json1 = '{
 				"type":"flex",
