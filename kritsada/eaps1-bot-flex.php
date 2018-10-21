@@ -1,5 +1,5 @@
 <?php
-//require('./db/connect-db.php');//เรียกใช้ file connect-db
+	require('./db/connect-db.php');//เรียกใช้ file connect-db
 //	$server = "us-cdbr-iron-east-01.cleardb.net";
 //	$username = "bb638a0b9e5724";
 //	$password = "3556cc19";
@@ -67,14 +67,13 @@ if (!is_null($events['events'])) //check ค่าในตัวแปร $even
             $first_char = substr($txtin,0,1); //ตัดเอาเฉพาะตัวอักษรตัวแรก
 			if($first_char == "@") //เช็คว่าต้องการคุยกับ Bot ใช่หรือไม่
 			{
-				// เช็คสถานะว่ามาจาก Group หรือไม่
-				
-				$server = "us-cdbr-iron-east-01.cleardb.net";
-				$username = "bb638a0b9e5724";
-				$password = "3556cc19";
-				$db = "heroku_5663ecc9ac15f3e";
-				$conn = new mysqli($server, $username, $password, $db);
-				mysqli_query($conn, "SET NAMES UTF8");
+				// เชื่อมต่อฐานข้อมูล ใน Navicat
+				//$server = "us-cdbr-iron-east-01.cleardb.net";
+				//$username = "bb638a0b9e5724";
+				//$password = "3556cc19";
+				//$db = "heroku_5663ecc9ac15f3e";
+				//$conn = new mysqli($server, $username, $password, $db);
+				//mysqli_query($conn, "SET NAMES UTF8");
 			
 				$keyword = substr($txtin,1,strlen($txtin)); //สกัดคำค้นหาออกมา 
 				$query_search = mysqli_query($conn, "SELECT * FROM tbl_improve WHERE detail LIKE '%".$keyword."%'");
