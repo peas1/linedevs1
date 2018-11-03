@@ -54,7 +54,8 @@ if (!is_null($events['events'])) //check ค่าในตัวแปร $even
 				$keyword = substr($txtin,1,strlen($txtin));///ได้รหัสการไฟฟ้า 
 				//reply_msg($office_id,$replyToken);
 				$keyword_encode = base64_encode ($keyword);
-				$keyword = base64_encode ($keyword_encode);
+				$keyword_decode = base64_encode ($keyword_encode);
+				$keyword = $keyword_decode;
 				$query_search = mysqli_query($conn, "SELECT * FROM tbl_improve WHERE detail LIKE '%".$keyword."%'");
 				mysqli_query($query_search, "SET NAMES UTF8");	
 				$num = mysqli_num_rows($query_search);
