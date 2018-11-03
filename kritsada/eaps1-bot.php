@@ -50,6 +50,7 @@ if (!is_null($events['events'])) //check ค่าในตัวแปร $even
 			$db = "heroku_5663ecc9ac15f3e";
 			$conn = new mysqli($server, $username, $password, $db);
 			mysqli_query($conn, "SET NAMES UTF8");
+			mysqli_query($conn, "utf8"); //ลองเพิ่ม	
 			
 				$keyword = substr($txtin,1,strlen($txtin));///ได้รหัสการไฟฟ้า 
 				//reply_msg($office_id,$replyToken);
