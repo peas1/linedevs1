@@ -72,7 +72,7 @@ if (!is_null($events['events'])) //check ค่าในตัวแปร $even
 					while($objsearch = mysqli_fetch_array($query_search))
 				{
 					$txtsend = $txtsend ."\n\nงานที่ ".$a." : ".$objsearch["office"]."\nชื่องาน : ".$objsearch["detail"]."\nWBS : ".$objsearch["wbs"].
-					"\nอนุมัติครั้งที่ ".$objsearch["no"]."\nหนังสือที่ ".$objsearch["approval"]." ลว. ".$objsearch["date"];
+					"\nหนังสือที่ ".$objsearch["approval"]." ลว. ".$objsearch["date"]." (อนุมัติครั้งที่ ".$objsearch["no"].")";
 					$a = $a+1;
 				}
 					}
