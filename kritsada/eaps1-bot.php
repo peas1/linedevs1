@@ -50,7 +50,7 @@ if (!is_null($events['events'])) //check ค่าในตัวแปร $even
 			$db = "heroku_5663ecc9ac15f3e";
 			$conn = new mysqli($server, $username, $password, $db);
 			mysqli_query($conn, "SET NAMES UTF8");
-			mysqli_set_charset($conn, "utf8"); //ลองเพิ่ม	
+			//mysqli_set_charset($conn, "utf8"); //ลองเพิ่ม	
 			
 				$keyword = substr($txtin,1,strlen($txtin));///ได้รหัสการไฟฟ้า 
 				//reply_msg($office_id,$replyToken);
@@ -71,7 +71,7 @@ if (!is_null($events['events'])) //check ค่าในตัวแปร $even
 					$a=1;
 					while($objsearch = mysqli_fetch_array($query_search))
 				{
-					$txtsend = $txtsend ."\n\nงานที่ ".$a."\nของ : ".$objsearch["office"]."\nชื่องาน : ".$objsearch["detail"]."\nWBS : ".$objsearch["wbs"].
+					$txtsend = $txtsend ."\n\nงานที่ ".$a." : ".$objsearch["office"]."\nชื่องาน : ".$objsearch["detail"]."\nWBS : ".$objsearch["wbs"].
 					"\nอนุมัติครั้งที่ ".$objsearch["no"]."\nหนังสือที่ ".$objsearch["approval"]." ลว. ".$objsearch["date"];
 					$a = $a+1;
 				}
