@@ -36,15 +36,16 @@ function reply_msg($txtback,$replyToken)//สร้างข้อความ�
 			{
 				$replyToken = $event['replyToken']; //เก็บ reply token เอาไว้ตอบกลับ
 				$txtin = $event['message']['text']; //เอาข้อความจากไลน์ใส่ตัวแปร $txtin
-				$sql_text = "SELECT * FROM tbl_nuthapong WHERE name LIKE '%".$txtin."%'";
-				$query = mysqli_query($conn,$sql_text);
-				$num_rows = mysqli_num_rows($query);
+				//$sql_text = "SELECT * FROM tbl_nuthapong WHERE name LIKE '%".$txtin."%'";
+				//$query = mysqli_query($conn,$sql_text);
+				//$num_rows = mysqli_num_rows($query);
 				/*while($obj = mysqli_fetch_array($query))
 				{
 					$txtback = $txtback." ".$obj["lastname"];
 					
 				}*/
-				$txtback = "ผลการค้นหา ".$num_rows." รายการ https://eass1-bot.herokuapp.com/nutthapong/result.php?keyword=".$txtin;
+				//$txtback = "ผลการค้นหา ".$num_rows." รายการ https://eass1-bot.herokuapp.com/nutthapong/result.php?keyword=".$txtin;
+				$txtback = "123456789";
 				reply_msg($txtback,$replyToken);
 			}
 		}
