@@ -1,6 +1,6 @@
 <?php
-    require('../libs/PHPExcel/Classes/PHPExcel.php');
-    include('../libs/PHPExcel/Classes/PHPExcel/IOFactory.php');
+    require('./libs/PHPExcel/Classes/PHPExcel.php');
+    include('./libs/PHPExcel/Classes/PHPExcel/IOFactory.php');
     date_default_timezone_set('Asia/Bangkok');
     function getDataFromXLSXPath($xlsxPath){
         // load xlsx file with its path
