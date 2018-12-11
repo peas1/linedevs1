@@ -94,7 +94,7 @@
                     enctype: 'multipart/form-data',
                     processData: false,
                     success: function(response) {
-                        alert(response);
+                        alert("ld;sm;sdmg;dg");
                     },
                     error: function(response){
                         console.log('[error]', response);
