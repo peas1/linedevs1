@@ -2,9 +2,10 @@ function upload()
 {
 	var file = document.getElementById("vocfile");
 	alert(file.value);
-	/*var formData = new FormData($(this)[0]);
+	var formData = new FormData();
+	formData.append('file', file.val());
                 $.ajax({
-                    url: './api/upload-loan.php',
+                    url: 'upload-xls.php',
                     method: 'POST',
                     data: formData,
                     async: true,
@@ -25,5 +26,5 @@ function upload()
                         $.unblockUI();
                         location.reload();
                     }
-                });*/
+                });
 }
