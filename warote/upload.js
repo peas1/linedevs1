@@ -1,9 +1,9 @@
 function upload()
 {
 	var file = document.getElementById("vocfile");
-	alert(file.value);
+	//alert(file.value);
 	var formData = new FormData();
-	formData.append('file', file.val());
+	formData.append('file', file.value);
                 $.ajax({
                     url: 'upload-xls.php',
                     method: 'POST',
