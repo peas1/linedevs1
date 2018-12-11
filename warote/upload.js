@@ -8,13 +8,11 @@ function upload()
                     url: 'upload-xls.php',
                     method: 'POST',
                     data: formData,
-                    aasync: true,
-					cache: false,
-					processData: false,
-					contentType: false,
-                    beforeSend: function(){
-                        $.blockUI({ message:'<h3>Uploading xlsx file...</h3>' });
-                    },
+                    async: true,
+                    cache: false,
+                    contentType: false,
+                    enctype: 'multipart/form-data',
+                    processData: false,
                     success: function(response) {
                         alert(response);
                     },
@@ -22,7 +20,6 @@ function upload()
                         console.log('[error]', response);
                     },
                     complete: function() {
-                        $.unblockUI();
                         location.reload();
                     }
                 });
