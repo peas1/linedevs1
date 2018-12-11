@@ -29,7 +29,7 @@
     function uploadXLSXFile($conn, $file){
         $filename = $file['name'];
         $ext = pathinfo($filename, PATHINFO_EXTENSION);
-        $target_path = "../loan-files/".basename(date('d-m-').(date("Y")+543)).".".$ext;
+        $target_path = "./xls/".basename(date('d-m-').(date("Y")+543)).".".$ext;
         $uploaded_result = @move_uploaded_file($file['tmp_name'], $target_path);
         if(!$uploaded_result) {
             die(error_get_last());
@@ -49,14 +49,12 @@
            //     continue;
            // }
             $count_complaint++;
-            $ca = $row['หมายเลขผู้ใช้ไฟฟ้า'];
-            $cs_name = $row['ชื่อ-สกุล'];
-            $bill = date('m-Y', PHPExcel_Shared_Date::ExcelToPHP($row['บิลเดือน']));
-            //$bill = $row['บิลเดือน'];
-            $price = $row['เงินที่ค้างชำระ'];
-            $tax = $row['     ค่าภาษีฯ'];
-            
-            $sql = "INSERT INTO tbl_loan(office,ca, name, moth, price, tax) VALUES('$office','$ca','$cs_name','$bill','$price','$tax')";
+            $office = $row['office'];
+            $jobname = $row['jobname'];
+            $docno = $row['docno'];
+            $d_date = $row['d-date'];
+            $wbs = $row['wbs'];
+            $sql = "INSERT INTO tbl_loan(office,job_name, doc_no, doc_date, wbs) VALUES('$office','$jobname','$docno','$d_date','$wbs')";
             //$stmt = $conn->prepare($sql);
            // $stmt->bind_param("isssssssssssssi",$ca,$cs_name,$bill,$price,$tax);
            // $stmt->execute();
