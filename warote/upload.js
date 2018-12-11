@@ -8,11 +8,10 @@ function upload()
                     url: 'upload-xls.php',
                     method: 'POST',
                     data: formData,
-                    async: true,
-                    cache: false,
-                    contentType: false,
-                    enctype: 'multipart/form-data',
-                    processData: false,
+                    aasync: true,
+					cache: false,
+					processData: false,
+					contentType: false,
                     beforeSend: function(){
                         $.blockUI({ message:'<h3>Uploading xlsx file...</h3>' });
                     },
