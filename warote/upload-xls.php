@@ -7,6 +7,6 @@
     //clearComplaintData($conn);//<< Function นี้อยู่ใน utils.php
     //insertComplaintData($conn, $namedDataArray);//<< Function นี้อยู่ใน utils.php
     //$number_complaint = countComplaintData($conn);
-    echo "ได้เพิ่มข้อมูลแล้วทั้งหมด ".$_FILES['vocfile'];
+    echo "ได้เพิ่มข้อมูลแล้วทั้งหมด ".$target_path;
 
  ?>
