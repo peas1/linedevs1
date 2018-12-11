@@ -93,14 +93,17 @@
                     contentType: false,
                     enctype: 'multipart/form-data',
                     processData: false,
+                    beforeSend: function(){
+                        $.blockUI({ message:'<h3>Uploading xlsx file...</h3>' });
+                    },
                     success: function(response) {
-                        alert("ld;sm;sdmg;dg");
+                        alert(response);
                     },
                     error: function(response){
                         console.log('[error]', response);
                     },
                     complete: function() {
-                  
+                        $.unblockUI();
                         location.reload();
                     }
                 });
