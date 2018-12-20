@@ -6,7 +6,7 @@ if($method == "POST")
 	$requestBody = file_get_contents('php://input');
 	$json = json_decode($requestBody);
 	//$keyword = $json->result->parameters->text;
-	/*$res='{
+	$res='{
 			"fulfillmentText": "This is a text response",
 			"source": "example.com",
 			"payload": {
@@ -14,9 +14,9 @@ if($method == "POST")
 										"text": "'.$json.'"
 									}
 						}
-		 }';*/	
+		 }';
 	header("Content-Type: application/json");
-	echo json_encode($json);	
+	echo json_encode($res);	
 }else{
 	echo "Method Not allow";
 }
