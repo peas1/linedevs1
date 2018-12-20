@@ -14,7 +14,7 @@ if($method == "POST")
 										"text": "'.$json.'"
 									}
 						}
-		 }'	
+		 }';	
 	header("Content-Type: application/json");
 	echo json_encode($res);	
 }else{
