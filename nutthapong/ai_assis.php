@@ -8,7 +8,7 @@ if($method == "POST")
 	//$keyword = $json->result->parameters->text;
 	$res='{
 			"fulfillmentText": "This is a text response",
-			"source": "example.com",
+			"source": "line",
 			"payload": {
 						"line": {
 										"text": "'.$json.'"
