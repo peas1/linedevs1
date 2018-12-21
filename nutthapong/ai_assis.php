@@ -9,7 +9,7 @@ if($method == "POST")
 	$res='{"fulfillmentText": "This is a text response","source": "line","payload": {"line":{"text": "กวทาเสกดาเสวดากเนเดสวเพ"}}}';
 	header("Content-Type: application/json");
 	//echo json_encode($res);
-	echo $json;
+	echo $requestBody;
 }else{
 	echo "Method Not allow";
 }
