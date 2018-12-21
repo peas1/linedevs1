@@ -11,7 +11,7 @@ if($method == "POST")
 			"source": "line",
 			"payload": {
 						"line": {
-										"text": "'.$json.'"
+										"text": "กวทาเสกดาเสวดากเนเดสวเพ"
 									}
 						}
 		 }';
