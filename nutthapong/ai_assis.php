@@ -19,8 +19,9 @@ if($method == "POST")
 					"source"=>"line",
 					"payload"=>array(
 									  "line"=>array(
-												     "type"=>"text",
-													 "text"=>"jkljioopjdkslajdiwd"
+													 "message"=> array(
+																		"type"=>"text",
+																		"text"=>"jkljioopjdkslajdiwd")
 													)
 									)
 				);
