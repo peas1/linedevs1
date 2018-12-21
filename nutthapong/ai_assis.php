@@ -15,8 +15,16 @@ if($method == "POST")
 										}
 							}
 			}';
+	$res2 = array(
+					"source"=>"line",
+					"payload"=>array(
+									  "line"=>array(
+												     "text"=>"4548454854"
+													)
+									)
+				);
 	header("Content-Type: application/json");
-	echo json_encode($res);
+	echo json_encode($res2);
 	//echo $requestBody;
 }else{
 	echo "Method Not allow";
