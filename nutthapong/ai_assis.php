@@ -11,7 +11,7 @@ if($method == "POST")
 					"source":"line",
 					"payload":{
 								"line":{
-										"text":"456498468548"
+										"type":"text"
 										}
 							}
 			}';
@@ -19,7 +19,8 @@ if($method == "POST")
 					"source"=>"line",
 					"payload"=>array(
 									  "line"=>array(
-												     "text"=>"4548454854"
+												     "type"=>"text",
+													 "text"=>"jkljioopjdkslajdiwd"
 													)
 									)
 				);
