@@ -1,10 +1,10 @@
 <?php   
 header("Content-Type: application/json");
-function push()
+function push($data)
 {
     $access_token = 'HScoQtJ9WeTsUePpz0xZ7vo//Tm7j+PR/LCoi09r4L7XDPJVZr/Bc3iSn6NGBJVa8LpQM446o/uIUbLxOfjm09FDX+73peOuXqHvKttcHLeqogyWj0RU/Vqj1LapFoxfp2lOPYq4O8ErqPnZGyRpPAdB04t89/1O/w1cDnyilFU=';
     $messages = [ 'type' => 'text', 
-				'text' => 'testtttt'
+				'text' => $data
                  ];
     $url = 'https://api.line.me/v2/bot/message/push';
     $data = ['to' => 'Ua9ba6c25071c19588c095ec147efe2b1','messages' => [$messages]];
@@ -48,7 +48,7 @@ if($method == "POST")
 				);
 	header("Content-Type: application/json");
 	push();
-	echo json_encode($res3);
+	echo json_encode($json);
 	//echo $requestBody;
 }else{
 	echo "Method Not allow";
