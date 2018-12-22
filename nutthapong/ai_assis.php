@@ -25,7 +25,16 @@ if($method == "POST")
 													)
 									)
 				);
-	$res3 = array("data"=>array("line"=>array("text"=>"21512651951")));
+	$res3 = array(
+					"data"=>array(
+									"line"=>array(
+													"message"=> array(
+																		"type"=>"text",
+																		"text"=>"jkljioopjdkslajdiwd"
+																	)
+												)
+									)
+				);
 	header("Content-Type: application/json");
 	echo json_encode($res3);
 	//echo $requestBody;
