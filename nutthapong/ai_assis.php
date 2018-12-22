@@ -30,13 +30,13 @@ if($method == "POST")
 	header("Content-Type: application/json");
 	$data = json_encode($json);
 	$replyToken = $json->originalRequest->data->data->replyToken;
-	/*$topic = $json->result->parameters->topic;
+	$topic = $json->result->parameters->topic;
 	$day = $json->result->parameters->day;
 	$time_period = $json->result->parameters->t_period;
 	$place = $json->result->parameters->place;
 	$Attendees = $json->result->parameters->Attendees;
-	$data_back = $topic."\n".$day."\n".$time_period."\n".$place."\n".$Attendees;*/
-	reply_msg($data,$replyToken);
+	$data_back = $topic."\n".$day."\n".$time_period."\n".$place."\n".$Attendees;
+	reply_msg($topic,$replyToken);
 	//push($replytoken);
 	echo json_encode($res3);
 	//echo $requestBody;
