@@ -47,7 +47,8 @@ if($method == "POST")
 	$res3 = array("message"=>array("platform"=>"line","speech"=>"Text response","type"=>0)
 				);
 	header("Content-Type: application/json");
-	push($json);
+	$data = json_encode($json);
+	push($data);
 	echo json_encode($res3);
 	//echo $requestBody;
 }else{
