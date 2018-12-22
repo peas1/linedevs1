@@ -48,7 +48,8 @@ if($method == "POST")
 				);
 	header("Content-Type: application/json");
 	$data = json_encode($json);
-	push($data);
+	$replytoken = $json->data->data->replyToken;
+	push($replytoken);
 	echo json_encode($res3);
 	//echo $requestBody;
 }else{
