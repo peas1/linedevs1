@@ -35,8 +35,8 @@ if($method == "POST")
 	$time_period = $json->result->parameters->t_period;
 	$place = $json->result->parameters->place;
 	$Attendees = $json->result->parameters->Attendees;
-	$data = $topic."\n".$day."\n".$time_period."\n".$place."\n".$Attendees;
-	reply_msg($data,$replyToken);
+	$data_back = $topic."\n".$day."\n".$time_period."\n".$place."\n".$Attendees;
+	reply_msg($data_back,$replyToken);
 	//push($replytoken);
 	echo json_encode($res3);
 	//echo $requestBody;
