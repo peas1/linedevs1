@@ -25,14 +25,9 @@ if($method == "POST")
 													)
 									)
 				);
-	$response=array(
-          "source" => $request["result"]["source"],
-          "speech" => "Speech for response",
-          "messages" => "asdffsf",
-          "contextOut" => array()
-      );
+	
 	header("Content-Type: application/json");
-	echo json_encode($response);
+	echo json_encode($res2);
 	//echo $requestBody;
 }else{
 	echo "Method Not allow";
