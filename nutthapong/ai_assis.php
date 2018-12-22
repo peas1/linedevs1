@@ -16,7 +16,7 @@ if($method == "POST")
 							}
 			}';
 	$res2 = array(
-					"source"=>$requestBody["result"]["source"],
+					"source"=>$json["result"]["source"],
 					"payload"=>array(
 									  "line"=>array(
 													 "message"=> array(
