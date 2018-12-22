@@ -28,7 +28,7 @@ if($method == "POST")
 	$response=array(
           "source" => $request["result"]["source"],
           "speech" => "Speech for response",
-          "messages" => $res2,
+          "messages" => "asdffsf",
           "contextOut" => array()
       );
 	header("Content-Type: application/json");
