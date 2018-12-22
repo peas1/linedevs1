@@ -25,15 +25,7 @@ if($method == "POST")
 													)
 									)
 				);
-	$res3 = array(
-					"data"=>array(
-									"line"=>array(
-													"message"=> array(
-																		"type"=>"text",
-																		"text"=>"jkljioopjdkslajdiwd"
-																	)
-												)
-									)
+	$res3 = array("message"=>array("platform"=>"line","speech"=>"Text response","type"=>0)
 				);
 	header("Content-Type: application/json");
 	echo json_encode($res3);
