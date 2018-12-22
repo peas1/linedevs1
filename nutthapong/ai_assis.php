@@ -47,8 +47,8 @@ if($method == "POST")
 	$res3 = array("message"=>array("platform"=>"line","speech"=>"Text response","type"=>0)
 				);
 	header("Content-Type: application/json");
-	push();
-	echo json_encode($json);
+	push($json);
+	echo json_encode($res3);
 	//echo $requestBody;
 }else{
 	echo "Method Not allow";
