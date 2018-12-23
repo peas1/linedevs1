@@ -35,7 +35,7 @@ if($method == "POST")
 	$time_period = $json->result->parameters->t_period;
 	$place = $json->result->parameters->place;
 	$Attendees = $json->result->parameters->Attendees;
-	$data_back = "หัวข้อการประชุม ".$topic."\nวันที่".$day."\nเวลา".$time_period."\nสถานที่".$place."\nผู้เข้าร่วมประชุม".$Attendees;
+	$data_back = "หัวข้อการประชุม: ".$topic."\nวันที่:".$day."\nเวลา:".$time_period."\nสถานที่:".$place."\nผู้เข้าร่วมประชุม:".$Attendees;
 	reply_msg($data_back,$replyToken);
 	//push($replytoken);
 	echo json_encode($res3);
