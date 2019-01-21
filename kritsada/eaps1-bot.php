@@ -42,7 +42,7 @@ if (!is_null($events['events'])) //check ค่าในตัวแปร $even
             $source_type = $event['source']['type'];//เก็บที่มาของ event(user หรือ group)
             $txtin = $event['message']['text'];//เอาข้อความจากไลน์ใส่ตัวแปร $txtin
             $first_char = substr($txtin,0,1);//ตัดเอาเฉพาะตัวอักษรตัวแรก
-			if($first_char == "@")
+			if($first_char == "#")
 			{
 			$server = "us-cdbr-iron-east-01.cleardb.net";
 			$username = "bb638a0b9e5724";
